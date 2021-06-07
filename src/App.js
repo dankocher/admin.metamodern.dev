@@ -1,7 +1,14 @@
 import "./App.css";
 
+import { SideMenu } from "./Components/SideMenu/index";
+
 function App() {
-    return <div className="App">{"Welcome body"}</div>;
+    return (
+        <div className="App">
+            <SideMenu />
+            {"Welcome body"}
+        </div>
+    );
 }
 
 export default App;

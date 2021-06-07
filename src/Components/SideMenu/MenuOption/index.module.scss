@@ -1,0 +1,56 @@
+@import "../../../styles/foundation.scss";
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+
+    background-color: white;
+
+    i {
+        margin-left: 20px;
+    }
+
+    span {
+        margin-left: 16px;
+    }
+
+    &:hover {
+        background-color: $neutral200;
+
+        svg {
+            & > * {
+                fill: $neutral900;
+            }
+        }
+    }
+
+    svg {
+        & > * {
+            fill: $neutral700;
+        }
+    }
+
+    &__focused {
+        width: 4px;
+        height: 100%;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        background-color: $blue50;
+    }
+}
+
+@media only screen and (max-width: $screenChangeMenu) {
+    .container {
+        span {
+            display: none;
+        }
+    }
+}
