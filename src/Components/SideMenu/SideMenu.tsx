@@ -27,10 +27,13 @@ export const SideMenu: FC<SideMenuProps> = (
         <div className={styles.container}>
             <i>{metamodernIcon}</i>
             <div className={styles.container__imgContainer}>
-                <img src={imgUrl} alt="photo" />
+                <img src={imgUrl} alt="avatar" />
             </div>
-            <span>{userName}</span>
-            <span>{email}</span>
+            <div className={styles.container__description}>
+                <span>{userName}</span>
+                <span>{email}</span>
+            </div>
+
             <MenuOption icon={homeIcon} label="Главная" />
             <MenuOption icon={settingsIcon} label="Общие настройки" />
             <MenuOption icon={teamIcon} label="Команда" />

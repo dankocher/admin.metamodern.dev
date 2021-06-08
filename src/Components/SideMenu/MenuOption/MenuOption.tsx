@@ -12,6 +12,9 @@ export const MenuOption: FC<MenuOptionProps> = ({
             <i>{icon}</i>
             <span>{label}</span>
             <div className={styles.container__focused} />
+            <div className={styles.container__description}>
+                <span>{label}</span>
+            </div>
         </div>
     );
 };
