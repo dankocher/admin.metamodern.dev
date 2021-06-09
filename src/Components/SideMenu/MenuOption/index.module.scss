@@ -21,6 +21,10 @@ $height: 48px;
                 fill: $neutral900;
             }
         }
+
+        & > span {
+            color: $neutral900;
+        }
     }
 
     i {
@@ -30,6 +34,8 @@ $height: 48px;
     & > span {
         height: 22px;
         margin-left: 16px;
+
+        color: $neutral700;
 
         transition: display $tranzition150;
         overflow: hidden;

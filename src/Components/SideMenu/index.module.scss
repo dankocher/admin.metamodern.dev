@@ -55,6 +55,14 @@
 
         align-items: center;
         margin-bottom: 24px;
+
+        &__name {
+            color: $neutral800;
+        }
+
+        &__mail {
+            color: $neutral700;
+        }
     }
 }
 

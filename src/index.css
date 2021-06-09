@@ -1,13 +1,94 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+        "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    box-sizing: border-box;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+        monospace;
+}
+
+/* Adminka / Subtitle 1 */
+
+.subtitle1 {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0.0015em;
+}
+
+/* Adminka/Subtitle 2; */
+.subtitle2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    letter-spacing: 0.001em;
+}
+
+/* Adminka/Subtitle 3 */
+
+.subtitle3 {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+
+    letter-spacing: 0.001em;
+}
+
+/* Adminka/Body 1 */
+
+.body1 {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+
+    letter-spacing: 0.005em;
+}
+
+/* Adminka / Body 2; */
+
+.body2 {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    letter-spacing: 0.0025em;
+}
+
+/* Adminka / Caption; */
+
+.caption {
+    font-family: "Roboto", sans-serif;
+    font-size: 13px;
+    line-height: 17px;
+    font-weight: 500;
+    letter-spacing: 0.004em;
+}
+
+/* Adminka / basefont; */
+
+.basefont {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+}
+
+/* Adminka / H6 */
+
+.adminkaH6 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0.0015em;
 }

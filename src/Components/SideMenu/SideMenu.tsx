@@ -30,8 +30,16 @@ export const SideMenu: FC<SideMenuProps> = (
                 <img src={imgUrl} alt="avatar" />
             </div>
             <div className={styles.container__description}>
-                <span>{userName}</span>
-                <span>{email}</span>
+                <span
+                    className={`${styles.container__description__name} adminkaH6`}
+                >
+                    {userName}
+                </span>
+                <span
+                    className={`${styles.container__description__mail} subtitle3`}
+                >
+                    {email}
+                </span>
             </div>
 
             <MenuOption icon={homeIcon} label="Главная" />

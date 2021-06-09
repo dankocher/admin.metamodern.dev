@@ -10,10 +10,10 @@ export const MenuOption: FC<MenuOptionProps> = ({
     return (
         <div className={styles.container}>
             <i>{icon}</i>
-            <span>{label}</span>
+            <span className="subtitle1">{label}</span>
             <div className={styles.container__focused} />
             <div className={styles.container__description}>
-                <span>{label}</span>
+                <span className="caption">{label}</span>
             </div>
         </div>
     );
