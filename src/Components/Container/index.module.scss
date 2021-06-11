@@ -1,0 +1,32 @@
+@import "../../styles/foundation.scss";
+
+.ground {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    padding-top: 44px;
+
+    background-color: $neutral100;
+
+    &__centred {
+        width: $contentContainerWidth;
+
+        &__header {
+            margin-bottom: 16px;
+            color: $neutral900;
+        }
+
+        &__container {
+            width: 100%;
+            min-height: 40px;
+
+            border: $defaultBorder solid $neutral300;
+            border-radius: $borderRadius;
+
+            background-color: $neutral0;
+        }
+    }
+}

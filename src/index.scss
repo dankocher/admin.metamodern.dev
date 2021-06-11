@@ -6,7 +6,9 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    box-sizing: border-box;
+    & * {
+        box-sizing: border-box;
+    }
 }
 
 code {
@@ -81,6 +83,14 @@ code {
     font-size: 14px;
     line-height: 16px;
     font-weight: 400;
+}
+
+/* Adminka/H5 */
+
+.adminkaH5 {
+    font-family: "Roboto", sans-serif;
+    font-size: 24px;
+    line-height: 32px;
 }
 
 /* Adminka / H6 */

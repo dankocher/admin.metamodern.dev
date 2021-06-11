@@ -1,6 +1,6 @@
 import React, { FC, ReactElement } from "react";
 
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Redirect, Switch, Route } from "react-router-dom";
 
 import { Portfolio } from "../Components/Portfolio";
 import { UsersSettings } from "../Components/UsersSettings";
@@ -20,6 +20,7 @@ export const Navigation: FC<any> = (): ReactElement => {
                 path={routConstants.GENERAL_SETTINGS}
                 component={GeneralSettings}
             />
+            <Redirect from="*" to={routConstants.HOME} />
         </Switch>
     );
 };
