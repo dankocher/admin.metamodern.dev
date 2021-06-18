@@ -22,7 +22,8 @@
     "noFallthroughCasesInSwitch": true,
     "resolveJsonModule": true,
     "noEmit": true,
-    "isolatedModules": true
+    "isolatedModules": true,
+    "noImplicitAny": false
   },
   "include": [
     "src/**/**/**/*"

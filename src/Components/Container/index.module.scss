@@ -15,8 +15,23 @@
         width: $contentContainerWidth;
 
         &__header {
+            position: relative;
+
+            display: flex;
+            align-items: center;
+
             margin-bottom: 16px;
-            color: $neutral900;
+
+            span {
+                color: $neutral900;
+            }
+
+            .btnContainer {
+                position: absolute;
+                left: -16px;
+
+                transform: translateX(-100%);
+            }
         }
 
         &__container {
