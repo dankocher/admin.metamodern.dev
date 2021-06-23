@@ -15,7 +15,12 @@ export const MenuOption: FC<MenuOptionProps> = ({
     };
 
     return (
-        <div className={styles.container} onClick={handleClick}>
+        <div
+            className={`${styles.container} ${
+                isSelected ? styles.selected : ""
+            }`}
+            onClick={handleClick}
+        >
             <i>{icon}</i>
             <span className="subtitle1">{label}</span>
             <div className={styles.container__description}>

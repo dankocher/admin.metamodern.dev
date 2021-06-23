@@ -1,0 +1,11 @@
+@import "../../../styles/foundation.scss";
+
+.container {
+    display: inline-block;
+
+    padding: 9px 12px;
+    border-radius: $borderRadius;
+
+    background-color: $neutral800;
+    color: $neutral0;
+}

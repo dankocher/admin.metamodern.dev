@@ -13,22 +13,25 @@ $height: 48px;
 
     background-color: white;
 
-    &:hover {
-        background-color: $neutral200;
+    cursor: pointer;
+
+    &:hover:not(.selected) {
+        background-color: $neutral100;
 
         svg {
             & > * {
-                fill: $neutral900;
+                fill: $neutral800;
             }
         }
 
         & > span {
-            color: $neutral900;
+            color: $neutral800;
         }
     }
 
     i {
         margin-left: 20px;
+        height: fit-content;
     }
 
     & > span {
@@ -78,6 +81,20 @@ $height: 48px;
             white-space: nowrap;
             color: $neutral0;
         }
+    }
+}
+
+.selected {
+    background-color: $neutral200;
+
+    svg {
+        & > * {
+            fill: $neutral900;
+        }
+    }
+
+    & > span {
+        color: $neutral900;
     }
 }
 
