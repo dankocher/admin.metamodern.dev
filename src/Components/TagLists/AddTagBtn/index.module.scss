@@ -8,4 +8,8 @@
 
     background-color: $neutral800;
     color: $neutral0;
+
+    &:hover {
+        background-color: $neutral900;
+    }
 }

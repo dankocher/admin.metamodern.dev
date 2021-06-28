@@ -2,7 +2,8 @@ import styles from "./index.module.scss";
 
 import React from "react";
 
-import { BriefList } from "../TagLists/BriefList";
+import { TagInputList } from "../TagLists/TagInputList";
+import { TagbleType } from "../TagLists/TagbleType";
 
 export const GeneralSettings = () => {
     return (
@@ -11,7 +12,10 @@ export const GeneralSettings = () => {
 
             <hr />
 
-            <BriefList />
+            <TagInputList
+                tagListType={TagbleType.BRIEF}
+                header="Теги для брифа"
+            />
         </div>
     );
 };

@@ -1,5 +1,5 @@
 export enum TagbleType {
     MAIL = "mail",
-    PROJECT = "priject",
+    PROJECT = "project",
     BRIEF = "brief",
 }
