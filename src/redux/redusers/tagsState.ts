@@ -1,4 +1,9 @@
-import { ADD_TAG, DELETE_TAG, CHANGE_VALUE } from "../actions/tagsActions";
+import {
+    ADD_TAG,
+    DELETE_TAG,
+    CHANGE_VALUE,
+    CHANGE_TOGGLE,
+} from "../actions/tagsActions";
 
 import { v4 as uuidv4 } from "uuid";
 
@@ -6,39 +11,57 @@ import { TagbleType } from "../../Components/TagLists/TagbleType";
 
 import { deleteHandler } from "../helperRedux";
 
-export interface tagsStateProps {
-    [id: string]: {
-        tagType: TagbleType.BRIEF | TagbleType.MAIL | TagbleType.PROJECT;
-        value: string;
-        isChecked?: boolean;
-    };
+interface Tag {
+    tagType: TagbleType.BRIEF | TagbleType.MAIL | TagbleType.PROJECT;
+    value: string;
+    isChecked?: boolean;
 }
 
-const initialState = {
-    [uuidv4()]: { tagType: TagbleType.BRIEF, value: "", isChecked: false },
-    [uuidv4()]: { tagType: TagbleType.MAIL, value: "" },
-    [uuidv4()]: { tagType: TagbleType.PROJECT, value: "" },
-};
+export interface TagsStateProps {
+    [id: string]: Tag;
+}
 
-const tagsState = (state: tagsStateProps = initialState, action) => {
+// reducer
+export function tagsState(state: TagsStateProps = {}, action) {
     switch (action.type) {
-        case ADD_TAG:
+        case ADD_TAG: {
+            const value = action.payload.value;
+            const tagType = action.payload.tagType;
+            const isChecked = action.payload.isChecked;
             return {
                 ...state,
-                [uuidv4()]: { tagType: action.payload, value: "" },
+                [uuidv4()]: { tagType, value, isChecked },
             };
+        }
 
         case DELETE_TAG:
             return deleteHandler(state, action);
 
-        case CHANGE_VALUE:
+        case CHANGE_VALUE: {
             const id = action.payload.id;
             const value = action.payload.value;
 
             return { ...state, [id]: { ...state[id], value } };
+        }
+
+        case CHANGE_TOGGLE: {
+            const id = action.payload;
+            return {
+                ...state,
+                [id]: { ...state[id], isChecked: !state[id].isChecked },
+            };
+        }
+
         default:
             return state;
     }
-};
+}
 
-export default tagsState;
+// selectors
+export const getTagArr = (state, tagListType) => {
+    const tagList = state.tagsState;
+
+    return Object.keys(tagList).filter(
+        (id: string) => tagList[id].tagType === tagListType
+    );
+};

@@ -2,7 +2,7 @@ import { combineReducers } from "redux";
 // import { persistReducer } from "redux-persist";
 // import storage from "redux-persist/lib/storage";
 
-import tagsState, { tagsStateProps } from "./tagsState";
+import { TagsStateProps, tagsState } from "./tagsState";
 
 // export const persistConfig = {
 //   key: "root",
@@ -16,8 +16,8 @@ import tagsState, { tagsStateProps } from "./tagsState";
 //   blacklist: ["currentTime", "isLoading"],
 // };
 
-export interface rootStateProps {
-    tagsState: tagsStateProps;
+export interface RootStateProps {
+    tagsState: TagsStateProps;
 }
 
 const rootReducer = combineReducers({ tagsState });

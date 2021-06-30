@@ -1,4 +1,4 @@
-import React, { FC, ReactElement } from "react";
+import React, { useEffect } from "react";
 
 import { Redirect, Switch, Route } from "react-router-dom";
 
@@ -8,7 +8,11 @@ import { GeneralSettings } from "../Components/GeneralSettings";
 
 import { routConstants } from "./index";
 
-export const Navigation: FC<any> = (): ReactElement => {
+export const Navigation = () => {
+    // useEffect(() => {
+    //     console.log("Navigation");
+    // }, []);
+
     return (
         <Switch>
             <Route exact path={routConstants.HOME} component={Portfolio} />

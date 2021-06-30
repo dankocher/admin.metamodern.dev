@@ -1,11 +1,15 @@
 @import "../../../styles/foundation.scss";
 
 .container {
-    display: inline-block;
+    display: grid;
+    place-items: center;
+
+    min-height: 40px;
 
     padding: 9px 12px;
     border-radius: $borderRadius;
 
+    cursor: pointer;
     background-color: $neutral800;
     color: $neutral0;
 
