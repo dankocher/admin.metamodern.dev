@@ -13,6 +13,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { TagListProps } from "./TagListProps";
 
 import { RootStateProps } from "../../../redux/redusers/rootReduser";
+import { TagbleType } from "../TagbleType";
 
 import { getTagArr } from "../../../redux/redusers/tagsState";
 import { addTag } from "../../../redux/actions/tagsActions";
@@ -70,7 +71,7 @@ export const TagInputList: FC<TagListProps> = ({
                             id={id}
                             defaultValue={tag.value}
                             isChecked={tag.isChecked}
-                            tagType={tagListType}
+                            isHasCheckbox={tagListType === TagbleType.BRIEF}
                         />
                     );
                 })}
@@ -81,7 +82,7 @@ export const TagInputList: FC<TagListProps> = ({
                         defaultValue={""}
                         innerRef={itemsRef}
                         isChecked={false}
-                        tagType={tagListType}
+                        isHasCheckbox={false}
                     />
                 ) : null}
 

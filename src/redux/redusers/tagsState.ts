@@ -40,8 +40,8 @@ export function tagsState(state: TagsStateProps = {}, action) {
         case CHANGE_VALUE: {
             const id = action.payload.id;
             const value = action.payload.value;
-
-            return { ...state, [id]: { ...state[id], value } };
+            const isChecked = action.payload.isChecked;
+            return { ...state, [id]: { ...state[id], value, isChecked } };
         }
 
         case CHANGE_TOGGLE: {

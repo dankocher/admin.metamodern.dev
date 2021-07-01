@@ -9,5 +9,6 @@ export interface TagInputProps {
     isChecked: boolean | undefined;
     onBlur?: (value: string, isChecked: boolean) => void | undefined;
 
-    tagType: TagbleType.BRIEF | TagbleType.MAIL | TagbleType.PROJECT;
+    // tagType: TagbleType.BRIEF | TagbleType.MAIL | TagbleType.PROJECT;
+    isHasCheckbox?: boolean;
 }

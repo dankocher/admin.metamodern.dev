@@ -13,9 +13,9 @@ export const deleteTag = (id) => ({
     payload: id,
 });
 
-export const changeValue = (id, value) => ({
+export const changeValue = (id, value, isCheckedLockal) => ({
     type: CHANGE_VALUE,
-    payload: { id, value },
+    payload: { id, value, isChecked: isCheckedLockal },
 });
 
 export const changeToggle = (id) => ({

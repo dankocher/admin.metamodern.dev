@@ -6,25 +6,24 @@ import { MetTagInput } from "@metamodern.dev/metamodern-ui/";
 import { TagInputProps } from "./TagInputProps";
 
 import {
-    addTag,
     deleteTag,
     changeValue,
     changeToggle,
 } from "../../../redux/actions/tagsActions";
 
-import { TagbleType } from "../TagbleType";
+// import { TagbleType } from "../TagbleType";
 
 export const TagInput: FC<TagInputProps> = ({
     id,
     defaultValue,
     isChecked,
-    tagType,
     innerRef,
     onBlur,
+    isHasCheckbox,
 }): ReactElement => {
     const dispatch = useDispatch();
     const [value, setValue] = useState("");
-    const [isCheckedLockal, setIsCheckedLockal] = useState<boolean>(false);
+    const [isCheckedLocal, setIsCheckedLocal] = useState<boolean>(false);
 
     useEffect(() => {
         setValue(defaultValue);
@@ -32,7 +31,7 @@ export const TagInput: FC<TagInputProps> = ({
 
     useEffect(() => {
         if (isChecked == null) return;
-        setIsCheckedLockal(isChecked);
+        setIsCheckedLocal(isChecked);
     }, [isChecked]);
 
     const onChange = (event) => {
@@ -46,12 +45,12 @@ export const TagInput: FC<TagInputProps> = ({
     const onBlurHandler = (_) => {
         if (id == null) {
             if (onBlur == null) return;
-            onBlur(value, isCheckedLockal);
+            onBlur(value, isCheckedLocal);
         } else {
             if (value === "") {
                 dispatch(deleteTag(id));
             } else {
-                dispatch(changeValue(id, value));
+                dispatch(changeValue(id, value, isCheckedLocal));
             }
         }
     };
@@ -68,9 +67,9 @@ export const TagInput: FC<TagInputProps> = ({
             onBlur={onBlurHandler}
             fontClass="body1"
             onClick={deleteTagHandler}
-            isHasCheckbox={tagType === TagbleType.BRIEF}
+            isHasCheckbox={isHasCheckbox}
             onToggle={onToggle}
-            isChecked={isChecked}
+            isChecked={isCheckedLocal}
         />
     );
 };
