@@ -1,0 +1,18 @@
+@import "../../../styles/foundation.scss";
+
+.contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &__leftSide,
+    &__rightSide {
+        width: 384px;
+
+        & > :not(:last-child) {
+            margin-bottom: 22px;
+        }
+    }
+}
+
+

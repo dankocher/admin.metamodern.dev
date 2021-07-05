@@ -3,6 +3,7 @@ import { combineReducers } from "redux";
 // import storage from "redux-persist/lib/storage";
 
 import { TagsStateProps, tagsState } from "./tagsState";
+import { contactsState } from "./contactsReduser";
 
 // export const persistConfig = {
 //   key: "root",
@@ -20,6 +21,6 @@ export interface RootStateProps {
     tagsState: TagsStateProps;
 }
 
-const rootReducer = combineReducers({ tagsState });
+const rootReducer = combineReducers({ tagsState, contactsState });
 
 export default rootReducer;

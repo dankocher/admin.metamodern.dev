@@ -1,18 +1,15 @@
 import styles from "./index.module.scss";
 
-import React, { useEffect } from "react";
+import React from "react";
 
+import { Contacts } from "./Contacts";
 import { TagInputList } from "../TagLists/TagInputList";
 import { TagbleType } from "../TagLists/TagbleType";
 
 export const GeneralSettings = () => {
-    // useEffect(() => {
-    //     console.log("GeneralSettings");
-    // }, []);
-
     return (
         <div className={styles.container}>
-            <div>GeneralSettings</div>
+            <Contacts />
 
             <hr />
 

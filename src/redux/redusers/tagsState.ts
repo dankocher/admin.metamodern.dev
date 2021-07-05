@@ -34,8 +34,12 @@ export function tagsState(state: TagsStateProps = {}, action) {
             };
         }
 
-        case DELETE_TAG:
-            return deleteHandler(state, action);
+        case DELETE_TAG: {
+            const currentTagId = action.payload;
+            const { [currentTagId]: value, ...newState } = state;
+            return newState;
+            // return deleteHandler(state, action);
+        }
 
         case CHANGE_VALUE: {
             const id = action.payload.id;
