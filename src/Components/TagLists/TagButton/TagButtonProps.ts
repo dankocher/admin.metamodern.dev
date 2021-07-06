@@ -1,9 +1,8 @@
-export interface TagInputProps {
+export interface TagButtonProps {
     id?: string;
     index?: number;
-    defaultValue: string;
-    innerRef?: any;
-    isChecked: boolean | undefined;
+    isChoosed?: boolean;
+    value: string;
     onBlur?: (value: string, isChecked: boolean) => void | undefined;
     isHasCheckbox?: boolean;
 }

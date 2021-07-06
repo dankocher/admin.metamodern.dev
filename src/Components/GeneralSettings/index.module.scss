@@ -1,13 +1,7 @@
 @import "../../styles/foundation.scss";
 
 .container {
-    padding: 44px 54px 64px;
-
-    & > hr {
-        margin-top: 30px;
-        margin-bottom: 32px;
-        border: 1px solid $neutral300;
-    }
+    padding: 43px 53px 63px;
 
     &__tagLists {
         & > :not(:last-child) {

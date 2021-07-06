@@ -1,0 +1,14 @@
+@import "../../../styles/foundation.scss";
+
+.container {
+    height: 48px;
+    width: 100%;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: $borderRadius;
+
+    color: $neutral0;
+    background-color: $neutral800;
+}

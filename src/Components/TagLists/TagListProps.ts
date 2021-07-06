@@ -1,4 +1,4 @@
-import { TagbleType } from "../TagbleType";
+import { TagbleType } from "./TagbleType";
 
 export interface TagListProps {
     tagListType: TagbleType.BRIEF | TagbleType.MAIL | TagbleType.PROJECT;

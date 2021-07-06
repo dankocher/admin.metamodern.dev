@@ -10,7 +10,7 @@ import { MenuOption } from "./MenuOption/index";
 import { homeIcon } from "../../assets/icons/home-icon";
 import { settingsIcon } from "../../assets/icons/settings-icon";
 import { teamIcon } from "../../assets/icons/team-icon";
-import { metamodernIcon } from "../../assets/icons/metamodern-big-icon";
+import { metamodernIcon } from "../../assets/icons/metamodern-icon";
 
 import { routConstants } from "../../Navigation";
 

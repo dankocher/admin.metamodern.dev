@@ -5,6 +5,7 @@ import { Redirect, Switch, Route } from "react-router-dom";
 import { Portfolio } from "../Components/Portfolio";
 import { UsersSettings } from "../Components/UsersSettings";
 import { GeneralSettings } from "../Components/GeneralSettings";
+import { EditProject } from "../Components/EditProject";
 
 import { routConstants } from "./index";
 
@@ -24,6 +25,7 @@ export const Navigation = () => {
                 path={routConstants.GENERAL_SETTINGS}
                 component={GeneralSettings}
             />
+            <Route path={routConstants.EDIT_PROGECT} component={EditProject} />
             <Redirect from="*" to={routConstants.HOME} />
         </Switch>
     );

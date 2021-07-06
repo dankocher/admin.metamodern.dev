@@ -1,3 +1,5 @@
+@import "./styles/foundation.scss";
+
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
@@ -12,6 +14,13 @@ body {
 
     i {
         line-height: 0;
+    }
+
+    hr {
+        margin-top: 27px;
+        margin-bottom: 32px;
+        border-width: 0;
+        border-top: 1px solid $neutral300;
     }
 }
 

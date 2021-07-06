@@ -1,4 +1,4 @@
-import styles from "./index.module.scss";
+import styles from "../index.module.scss";
 
 import React, {
     FC,
@@ -10,7 +10,7 @@ import React, {
 } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
-import { TagListProps } from "./TagListProps";
+import { TagListProps } from "../TagListProps";
 
 import { RootStateProps } from "../../../redux/redusers/rootReduser";
 import { TagbleType } from "../TagbleType";
@@ -59,10 +59,12 @@ export const TagInputList: FC<TagListProps> = ({
 
     return (
         <div className={styles.container}>
-            <span className="adminkaH6">{header}</span>
+            <span className={`${styles.container__header} adminkaH6`}>
+                {header}
+            </span>
 
             <div className={styles.container__tagList}>
-                {filtredKeyList?.map((id: any, index) => {
+                {filtredKeyList?.map((id: string) => {
                     const tag = tagList[id];
 
                     return (
@@ -71,7 +73,7 @@ export const TagInputList: FC<TagListProps> = ({
                             id={id}
                             defaultValue={tag.value}
                             isChecked={tag.isChecked}
-                            isHasCheckbox={tagListType === TagbleType.BRIEF}
+                            isHasCheckbox={tagListType === TagbleType.PROJECT}
                         />
                     );
                 })}
@@ -86,7 +88,7 @@ export const TagInputList: FC<TagListProps> = ({
                     />
                 ) : null}
 
-                <AddTagBtn onClick={addTagHandler} />
+                <AddTagBtn onClick={addTagHandler} label="+ tag" />
             </div>
         </div>
     );

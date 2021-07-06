@@ -1,4 +1,4 @@
 import { Navigation } from "./Navigation";
-import { routConstants } from "./constants";
+import { routConstants, getEditProgectUrl } from "./constants";
 
-export { Navigation, routConstants };
+export { Navigation, routConstants, getEditProgectUrl };

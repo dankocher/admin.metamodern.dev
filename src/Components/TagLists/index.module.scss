@@ -1,0 +1,25 @@
+@import "../../styles/foundation.scss";
+
+.container {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+
+    &__tagList {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
+
+        margin-top: 16px;
+
+        &__message {
+            color: $neutral600;
+        }
+    }
+
+    &__header {
+        color: $neutral900;
+    }
+}
