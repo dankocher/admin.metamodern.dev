@@ -33,7 +33,7 @@ export const EditProject = () => {
                     />
                     <div className={styles.header__nameWrapper__options}>
                         <div className={styles.toggleWrapper}>
-                            <MetToggle />
+                            <MetToggle isChecked />
                         </div>
                         <MetSquareIconCheckbox />
                         <MetSquareIconBtn icon={linkIcon} />
@@ -52,8 +52,9 @@ export const EditProject = () => {
 
                 <MetTextArea
                     inputFontClass={inputFont}
-                    placeholder={"Описание"}
+                    placeholder={"Короткое описание"}
                     rowsMins={2}
+                    rowsMax={11}
                 />
             </div>
 

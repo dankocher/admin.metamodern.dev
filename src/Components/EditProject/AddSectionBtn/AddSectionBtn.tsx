@@ -9,7 +9,11 @@ export const AddSectionBtn: FC<AddSectionBtnProps> = ({
     onClick,
 }): ReactElement => {
     return (
-        <div role="button" onClick={onClick} className={styles.container}>
+        <div
+            role="button"
+            onClick={onClick}
+            className={`${styles.container} body1`}
+        >
             {label}
         </div>
     );
