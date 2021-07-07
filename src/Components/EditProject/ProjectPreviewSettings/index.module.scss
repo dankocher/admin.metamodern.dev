@@ -1,0 +1,34 @@
+.container {
+    margin-bottom: 32px;
+
+    &__nameWrapper {
+        display: flex;
+        align-items: center;
+
+        margin-top: 16px;
+        margin-bottom: 8px;
+
+        &__options {
+            display: flex;
+
+            gap: 4px;
+
+            margin-left: 16px;
+
+            .toggleWrapper {
+                display: flex;
+                align-items: center;
+
+                width: 36px;
+            }
+        }
+    }
+
+    & > :last-child {
+        margin-top: 20px;
+    }
+}
+
+.tagLists {
+    margin-bottom: 32px;
+}
