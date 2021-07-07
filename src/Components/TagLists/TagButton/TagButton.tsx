@@ -21,5 +21,11 @@ export const TagButton: FC<TagButtonProps> = ({
 }): ReactElement => {
     const dispatch = useDispatch();
 
-    return <MetTagButton isHasCheckbox={isHasCheckbox} value={value} />;
+    return (
+        <MetTagButton
+            isHasCheckbox={isHasCheckbox}
+            value={value}
+            fontClass="body1"
+        />
+    );
 };
