@@ -12,11 +12,17 @@
     background-color: $neutral100;
 
     &__centred {
+        position: relative;
         width: $contentContainerWidth;
 
-        &__header {
-            position: relative;
+        .btnContainer {
+            position: absolute;
+            left: -16px;
 
+            transform: translateX(-100%);
+        }
+
+        &__header {
             display: flex;
             align-items: center;
 
@@ -24,13 +30,6 @@
 
             span {
                 color: $neutral900;
-            }
-
-            .btnContainer {
-                position: absolute;
-                left: -16px;
-
-                transform: translateX(-100%);
             }
         }
 

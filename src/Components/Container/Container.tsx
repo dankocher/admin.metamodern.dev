@@ -20,12 +20,18 @@ export const Container: FC<ContainerProps> = ({ children }): ReactElement => {
     const history = useHistory();
 
     const [isHomePage, setIsHomePage] = useState(true);
+    const [isHaveHeader, setIsHaveHeader] = useState(true);
 
     const header = headerList[location.pathname];
 
     useEffect(() => {
         setIsHomePage(location.pathname === routConstants.HOME);
-    }, [location.pathname, setIsHomePage]);
+        setIsHaveHeader(
+            location.pathname === routConstants.HOME ||
+                location.pathname === routConstants.GENERAL_SETTINGS ||
+                location.pathname === routConstants.USERS_SETTINGS
+        );
+    }, [location.pathname, setIsHomePage, setIsHaveHeader]);
 
     const setPath = () => {
         history.push(routConstants.HOME);
@@ -34,15 +40,19 @@ export const Container: FC<ContainerProps> = ({ children }): ReactElement => {
     return (
         <div className={styles.ground}>
             <div className={styles.ground__centred}>
-                <div className={styles.ground__centred__header}>
-                    {isHomePage ? null : (
-                        <div className={styles.btnContainer}>
-                            <MetCircleBtn onClick={setPath} />
-                        </div>
-                    )}
+                
+                {isHomePage ? null : (
+                    <div className={styles.btnContainer}>
+                        <MetCircleBtn onClick={setPath} />
+                    </div>
+                )}
 
-                    <span className="adminkaH5">{header}</span>
-                </div>
+                {isHaveHeader ? (
+                    <div className={styles.ground__centred__header}>
+                        <span className="adminkaH5">{header}</span>
+                    </div>
+                ) : null}
+
                 <div className={styles.ground__centred__container}>
                     {children}
                 </div>
