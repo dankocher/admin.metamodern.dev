@@ -23,7 +23,8 @@ body {
         border-top: 1px solid $neutral300;
     }
 
-    input {
+    input,
+    textarea {
         &::placeholder {
             color: $neutral600;
         }
