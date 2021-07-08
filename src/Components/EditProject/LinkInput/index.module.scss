@@ -48,6 +48,22 @@ $horizontalPadding: 11px;
     }
 }
 
+.siteIcon {
+    & svg {
+        & > * {
+            stroke: $neutral600;
+        }
+    }
+}
+
+.siteOnIcon {
+    & svg {
+        & > * {
+            stroke: $neutral800;
+        }
+    }
+}
+
 .iconColorOn {
     & svg {
         & > * {

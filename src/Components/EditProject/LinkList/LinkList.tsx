@@ -37,6 +37,7 @@ export const LinkList = (): ReactElement => {
                     icon={siteIcon}
                     fontClass="body1"
                     placeholder="site.com"
+                    isSite={true}
                 />
             </div>
         </div>

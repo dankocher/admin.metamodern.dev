@@ -13,6 +13,7 @@ export const LinkInput: FC<LinkInputProps> = ({
     icon,
     fontClass,
     placeholder,
+    isSite = false,
 }): ReactElement => {
     const inputRef = useRef<HTMLInputElement>(null);
 
@@ -35,6 +36,8 @@ export const LinkInput: FC<LinkInputProps> = ({
     const stateStyle = classNames(styles.container, {
         [styles.focused]: isFocused,
         [styles.iconColorOn]: value !== "",
+        [styles.siteIcon]: isSite,
+        [styles.siteOnIcon]: isSite && value !== "",
     });
 
     return (

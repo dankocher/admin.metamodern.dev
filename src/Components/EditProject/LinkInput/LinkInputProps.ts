@@ -5,4 +5,5 @@ export interface LinkInputProps {
     icon?;
     fontClass?: string;
     placeholder?: string;
+    isSite?: boolean;
 }
