@@ -1,0 +1,67 @@
+@import "../../../styles/foundation.scss";
+
+$verticalPadding: 8px;
+$horizontalPadding: 11px;
+
+.container {
+    width: 191px;
+    height: 40px;
+
+    display: flex;
+
+    padding: $verticalPadding $horizontalPadding;
+
+    border: $defaultBorder solid $neutral300;
+    border-radius: $borderRadius;
+
+    cursor: text;
+
+    & svg {
+        & > * {
+            filter: grayscale(1);
+        }
+    }
+
+    &:hover:not(.focused) {
+        border-color: $neutral600;
+
+        input {
+            color: $neutral800;
+        }
+    }
+
+    input {
+        color: $neutral700;
+
+        width: 100%;
+        height: 100%;
+
+        padding: 0;
+
+        background-color: transparent;
+        border-style: none;
+        outline: none;
+    }
+
+    &__iconWrapper {
+        margin-right: 8px;
+    }
+}
+
+.iconColorOn {
+    & svg {
+        & > * {
+            filter: grayscale(0);
+        }
+    }
+}
+
+.focused {
+    input {
+        color: $neutral800;
+    }
+
+    padding: calc(#{$verticalPadding} - 1px) calc(#{$horizontalPadding} - 1px);
+    border-width: $focusBorder;
+    border-color: $blue50;
+}

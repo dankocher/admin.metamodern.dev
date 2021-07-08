@@ -22,6 +22,12 @@ body {
         border-width: 0;
         border-top: 1px solid $neutral300;
     }
+
+    input {
+        &::placeholder {
+            color: $neutral600;
+        }
+    }
 }
 
 code {

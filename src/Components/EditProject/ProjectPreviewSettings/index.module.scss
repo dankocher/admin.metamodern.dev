@@ -1,5 +1,11 @@
+@import "../../../styles/foundation.scss";
+
 .container {
     margin-bottom: 32px;
+
+    input {
+        color: $neutral800;
+    }
 
     &__nameWrapper {
         display: flex;
