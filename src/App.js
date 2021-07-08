@@ -5,6 +5,8 @@ import { SideMenu } from "./Components/SideMenu/index";
 import { Navigation } from "./Navigation/index";
 import { Container } from "./Components/Container";
 
+import { Modal } from "./Components/Modal";
+
 function App() {
     return (
         <Router>
@@ -13,6 +15,7 @@ function App() {
                 <Container>
                     <Navigation />
                 </Container>
+                {/* <Modal message="Удалить запись <Название>? Это действие нельзя будет отменить." /> */}
             </div>
         </Router>
     );

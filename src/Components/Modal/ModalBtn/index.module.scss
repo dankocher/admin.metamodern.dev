@@ -1,0 +1,25 @@
+@import "../../../styles/foundation.scss";
+
+.okBtn,
+.cancelBtn {
+    padding: 12px 35px;
+
+    border-width: $defaultBorder;
+    border-style: solid;
+    border-radius: $borderRadius;
+
+    cursor: pointer;
+}
+
+.okBtn {
+    color: #da1414;
+    border-color: rgba(218, 20, 20, 0.38);
+}
+
+.cancelBtn {
+    margin-right: 16px;
+
+    color: $neutral900;
+    border-color: $neutral300;
+    background-color: $neutral100;
+}

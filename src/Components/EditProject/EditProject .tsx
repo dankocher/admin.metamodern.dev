@@ -6,6 +6,7 @@ import { ProjectPreviewSettings } from "./ProjectPreviewSettings";
 import { ProjectContent } from "./ProjectContent";
 
 import { LinkList } from "./LinkList";
+import { Modal } from "../Modal";
 
 export const EditProject = () => {
     return (
