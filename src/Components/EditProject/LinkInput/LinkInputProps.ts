@@ -1,7 +1,7 @@
 export interface LinkInputProps {
-    value?: string;
-    onChange?: (event) => {};
-    onBlur?: (event) => {};
+    value: string;
+    onChange: (event) => void;
+    onBlur?: (event) => void;
     icon?;
     fontClass?: string;
     placeholder?: string;

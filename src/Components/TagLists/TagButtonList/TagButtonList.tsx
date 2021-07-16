@@ -1,22 +1,17 @@
 import styles from "../index.module.scss";
 
-import React, {
-    FC,
-    ReactElement,
-    useRef,
-    useEffect,
-    useState,
-    useLayoutEffect,
-} from "react";
+import React, { FC, ReactElement } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 import { RootStateProps } from "../../../redux/redusers/rootReduser";
 import { getTagArr } from "../../../redux/redusers/tagsState";
+import { selectChoosedTagList } from "../../../redux/redusers/ProjectsReduser";
 
 import { TagListProps } from "../TagListProps";
 import { TagButton } from "../TagButton";
 
 export const TagButtonList: FC<TagListProps> = ({
+    projectId,
     tagListType,
     header,
 }): ReactElement => {
@@ -25,6 +20,18 @@ export const TagButtonList: FC<TagListProps> = ({
     const filtredKeyList = useSelector((state) =>
         getTagArr(state, tagListType)
     );
+
+    const choosedTagList = useSelector(
+        (state): Array<string> => {
+            if (!projectId) return [];
+            return selectChoosedTagList(state, projectId);
+        }
+    );
+
+    const getIsChoosedTag = (id) => {
+        if (!choosedTagList) return;
+        return choosedTagList.includes(id);
+    };
 
     return (
         <div className={styles.container}>
@@ -40,13 +47,17 @@ export const TagButtonList: FC<TagListProps> = ({
                         {"Добавте тэги в общих настройках."}
                     </span>
                 ) : (
-                    filtredKeyList?.map((id: string) => {
+                    filtredKeyList?.map((id: string, index) => {
                         const tag = tagList[id];
 
                         return (
                             <TagButton
                                 key={id}
+                                projectId={projectId}
+                                index={index}
+                                tagId={id}
                                 value={tag.value}
+                                isChoosed={getIsChoosedTag(id)}
                                 isHasCheckbox={tag.isChecked === true}
                             />
                         );

@@ -1,31 +1,52 @@
 import React, { FC, ReactElement, useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 import { MetTagButton } from "@metamodern.dev/metamodern-ui/";
 
-import { TagButtonProps } from "./TagButtonProps";
+import { selectChoosedTagList } from "../../../redux/redusers/ProjectsReduser";
 
 import {
-    deleteTag,
-    changeValue,
-    changeToggle,
-} from "../../../redux/actions/tagsActions";
+    chooseTagBtn,
+    unchooseTagBtn,
+} from "../../../redux/actions/ProjectsActions";
+
+import { TagButtonProps } from "./TagButtonProps";
 
 export const TagButton: FC<TagButtonProps> = ({
-    id,
-
+    projectId,
+    tagId,
+    index,
+    isChoosed,
     value,
-
-    onBlur,
     isHasCheckbox,
 }): ReactElement => {
     const dispatch = useDispatch();
+
+    const choosedTagList = useSelector(
+        (state): Array<string> => {
+            if (!projectId) return [];
+            return selectChoosedTagList(state, projectId);
+        }
+    );
+
+    const getIsChoosedTagIndex = (id): number => choosedTagList.indexOf(id);
+
+    const onToggleHandler = () => {
+        if (!projectId || !tagId) return;
+        if (isChoosed) {
+            dispatch(unchooseTagBtn(projectId, getIsChoosedTagIndex(tagId)));
+        } else {
+            dispatch(chooseTagBtn(projectId, tagId));
+        }
+    };
 
     return (
         <MetTagButton
             isHasCheckbox={isHasCheckbox}
             value={value}
             fontClass="body1"
+            onToggle={onToggleHandler}
+            isChoosed={isChoosed}
         />
     );
 };

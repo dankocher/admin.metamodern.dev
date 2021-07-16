@@ -1,4 +1,4 @@
 export interface AddSectionBtnProps {
     label?: string;
-    onClick?: (event) => {};
+    onClick?: (event) => void;
 }

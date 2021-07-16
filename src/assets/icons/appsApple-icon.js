@@ -33,11 +33,11 @@ export const appsAppleIcon = (
                 y2="-6.21133"
                 gradientUnits="userSpaceOnUse"
             >
-                <stop stop-color="#005CE2" />
-                <stop offset="0.278" stop-color="#0080E8" />
-                <stop offset="0.569" stop-color="#009CED" />
-                <stop offset="0.82" stop-color="#00B0F1" />
-                <stop offset="1" stop-color="#00B5F2" />
+                <stop stopColor="#005CE2" />
+                <stop offset="0.278" stopColor="#0080E8" />
+                <stop offset="0.569" stopColor="#009CED" />
+                <stop offset="0.82" stopColor="#00B0F1" />
+                <stop offset="1" stopColor="#00B5F2" />
             </linearGradient>
         </defs>
     </svg>
