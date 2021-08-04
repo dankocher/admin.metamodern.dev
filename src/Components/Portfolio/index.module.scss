@@ -8,4 +8,14 @@
         right: 0;
         transform: translateY(-100%);
     }
+
+    &__header {
+        display: grid;
+        grid-template: 48px / 64px 148px 169px 1fr 190px;
+
+        &__icon {
+            display: grid;
+            place-items: center;
+        }
+    }
 }

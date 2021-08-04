@@ -8,8 +8,11 @@ import { MetRectangleIconBtn } from "@metamodern.dev/metamodern-ui/";
 
 import translation from "../../language/ru.json";
 
+import { uncheckedStarIcon } from "../../assets/icons/unchecked-star-icon";
+
 import { getEditProgectUrl } from "../../Navigation";
 import { addProject } from "../../redux/actions/ProjectsActions";
+import { TableTitle } from "./TableTitle";
 
 export const Portfolio = () => {
     const dispatch = useDispatch();
@@ -26,12 +29,14 @@ export const Portfolio = () => {
                 <MetRectangleIconBtn onClick={goToEditProgect} />
             </div>
             <div className={styles.container__header}>
-                <span>{translation.photo}</span>
-                <span>{translation.title}</span>
-                <span>{translation.tags}</span>
-                <span>{translation.onOf}</span>
+                <div className={styles.container__header__icon}>
+                    {uncheckedStarIcon}
+                </div>
+                <TableTitle title={translation.photo} />
+                <TableTitle title={translation.title} />
+                <TableTitle title={translation.tags} />
+                <TableTitle title={translation.onOf} />
             </div>
-            IA PARFOLIO
         </div>
     );
 };
