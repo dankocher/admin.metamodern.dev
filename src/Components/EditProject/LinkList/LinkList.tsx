@@ -3,6 +3,8 @@ import styles from "./index.module.scss";
 import React, { FC, ReactElement, useState } from "react";
 import { useDispatch } from "react-redux";
 
+import translation from "../../../language/ru.json";
+
 import {
     editAppStoreLink,
     editPlayMarketLink,
@@ -36,13 +38,13 @@ export const LinkList: FC<{ id: string }> = ({ id }): ReactElement => {
 
     return (
         <div className={styles.container}>
-            <span className=" adminkaH6">{"Ссылки"}</span>
+            <span className="adminkaH6">{translation.links}</span>
 
             <div className={styles.container__linkList}>
                 <LinkInput
                     icon={appsAppleIcon}
                     fontClass="body1"
-                    placeholder="apps.apple.com"
+                    placeholder={translation.appStore}
                     value={localAppStore}
                     onChange={(event) =>
                         onChangeLinkHandler(event, setLocalAppStore)
@@ -55,7 +57,7 @@ export const LinkList: FC<{ id: string }> = ({ id }): ReactElement => {
                 <LinkInput
                     icon={playMarketIcon}
                     fontClass="body1"
-                    placeholder="play.market.com"
+                    placeholder={translation.playMarket}
                     value={localPlayMarket}
                     onChange={(event) =>
                         onChangeLinkHandler(event, setLocalPlayMarket)
@@ -68,7 +70,7 @@ export const LinkList: FC<{ id: string }> = ({ id }): ReactElement => {
                 <LinkInput
                     icon={figmaIcon}
                     fontClass="body1"
-                    placeholder="figma.com"
+                    placeholder={translation.figma}
                     value={localFigma}
                     onChange={(event) =>
                         onChangeLinkHandler(event, setLocalFigma)
@@ -81,7 +83,7 @@ export const LinkList: FC<{ id: string }> = ({ id }): ReactElement => {
                 <LinkInput
                     icon={siteIcon}
                     fontClass="body1"
-                    placeholder="site.com"
+                    placeholder={translation.site}
                     isSite={true}
                     value={localSite}
                     onChange={(event) =>

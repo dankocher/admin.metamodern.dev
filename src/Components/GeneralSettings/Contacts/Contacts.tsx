@@ -5,6 +5,8 @@ import { useSelector, useDispatch } from "react-redux";
 
 import { MetTextField } from "@metamodern.dev/metamodern-ui/";
 
+import translation from "../../../language/ru.json";
+
 import {
     editWatsapp,
     editEmail,
@@ -71,7 +73,7 @@ export const Contacts = () => {
                     labelFontClass={labelFont}
                     inputFontClass={inputFont}
                     isTextField={true}
-                    label={"WhatsApp"}
+                    label={translation.whatsApp}
                     value={localWhatsApp}
                     onChange={onChangeWhatsApp}
                     onBlur={onBlurWhatsApp}
@@ -80,7 +82,7 @@ export const Contacts = () => {
                     labelFontClass={labelFont}
                     inputFontClass={inputFont}
                     isTextField={true}
-                    label={"E-mail"}
+                    label={translation.mail}
                     value={localEmail}
                     onChange={onChangeEmail}
                     onBlur={onBlurEmail}
@@ -91,7 +93,7 @@ export const Contacts = () => {
                     labelFontClass={labelFont}
                     inputFontClass={inputFont}
                     isTextField={true}
-                    label={"Telegram"}
+                    label={translation.telegram}
                     value={localTelegram}
                     onChange={onChangeTelegram}
                     onBlur={onBlurTelegram}

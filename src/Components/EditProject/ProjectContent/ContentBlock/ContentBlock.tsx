@@ -2,13 +2,13 @@ import styles from "./index.module.scss";
 
 import React, { FC, ReactElement, useState, useEffect } from "react";
 
-// import { useDispatch } from "react-redux";
-
 import {
     MetTextField,
     MetTextArea,
     MetSquareIconBtn,
 } from "@metamodern.dev/metamodern-ui/";
+
+import translation from "../../../../language/ru.json";
 
 export const ContentBlock: FC<{
     onBlurHeading?: (heading: string, description: string) => void;
@@ -69,7 +69,7 @@ export const ContentBlock: FC<{
         <div className={styles.container}>
             <MetTextField
                 inputFontClass={inputFont}
-                placeholder={"Заголовок"}
+                placeholder={translation.heading}
                 value={localHeading}
                 onChange={(event) =>
                     onChangeTextHandler(event, setLocalHeading)
@@ -86,7 +86,7 @@ export const ContentBlock: FC<{
                     onChangeTextHandler(event, setLocalDescription)
                 }
                 onBlur={onBlureDescriptionHandler}
-                placeholder={"Описание"}
+                placeholder={translation.description}
                 rowsMins={3}
                 rowsMax={11}
             />

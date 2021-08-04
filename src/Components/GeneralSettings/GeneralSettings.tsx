@@ -1,6 +1,7 @@
 import styles from "./index.module.scss";
-
 import React from "react";
+
+import translation from "../../language/ru.json";
 
 import { Contacts } from "./Contacts";
 import { TagInputList } from "../TagLists/TagInputList";
@@ -16,15 +17,15 @@ export const GeneralSettings = () => {
             <div className={styles.container__tagLists}>
                 <TagInputList
                     tagListType={TagbleType.BRIEF}
-                    header="Теги для брифа"
+                    header={translation.briefTags}
                 />
                 <TagInputList
                     tagListType={TagbleType.PROJECT}
-                    header="Теги для кейсов"
+                    header={translation.сaseTags}
                 />
                 <TagInputList
                     tagListType={TagbleType.MAIL}
-                    header="Почты для отправки брифа"
+                    header={translation.mailForBrief}
                 />
             </div>
         </div>

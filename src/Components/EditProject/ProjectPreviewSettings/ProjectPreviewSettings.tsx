@@ -11,6 +11,8 @@ import {
     MetTextArea,
 } from "@metamodern.dev/metamodern-ui/";
 
+import translation from "../../../language/ru.json";
+
 import {
     editFullName,
     editShortName,
@@ -79,7 +81,7 @@ export const ProjectPreviewSettings: FC<{ id: string }> = ({
                 <div className={styles.container__nameWrapper}>
                     <MetTextField
                         inputFontClass={inputFont}
-                        placeholder={"Название"}
+                        placeholder={translation.title}
                         value={localFullName}
                         onChange={(event) =>
                             onChangeTextHandler(event, setLocalFullName)
@@ -119,7 +121,7 @@ export const ProjectPreviewSettings: FC<{ id: string }> = ({
 
                 <MetTextField
                     inputFontClass={inputFont}
-                    placeholder={"Короткое название"}
+                    placeholder={translation.shortTitle}
                     value={localShortName}
                     onChange={(event) =>
                         onChangeTextHandler(event, setLocalShortName)
@@ -131,7 +133,7 @@ export const ProjectPreviewSettings: FC<{ id: string }> = ({
 
                 <MetTextArea
                     inputFontClass={inputFont}
-                    placeholder={"Короткое описание"}
+                    placeholder={translation.shortDescription}
                     value={localShortDescription}
                     onChange={(event) =>
                         onChangeTextHandler(event, setLocalShortDescription)
@@ -150,7 +152,7 @@ export const ProjectPreviewSettings: FC<{ id: string }> = ({
             <div className={styles.tagLists}>
                 <TagButtonList
                     projectId={id}
-                    header={"Тэги"}
+                    header={translation.tags}
                     tagListType={TagbleType.PROJECT}
                 />
             </div>

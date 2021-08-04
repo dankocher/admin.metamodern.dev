@@ -10,6 +10,8 @@ import React, {
 } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
+import translation from "../../../language/ru.json";
+
 import { ContentBlock } from "./ContentBlock";
 import { AddSectionBtn } from "../AddSectionBtn";
 
@@ -90,7 +92,7 @@ export const ProjectContent: FC<{ id: string }> = ({ id }): ReactElement => {
     return (
         <div className={styles.container}>
             <span className={`${styles.container__header} adminkaH6`}>
-                {"Контент"}
+                {translation.content}
             </span>
             <div className={styles.container__contentList}>
                 {contentList?.map((item, index) => (
@@ -125,7 +127,10 @@ export const ProjectContent: FC<{ id: string }> = ({ id }): ReactElement => {
                     />
                 )}
             </div>
-            <AddSectionBtn label="Добавить блок" onClick={addNewContentBlock} />
+            <AddSectionBtn
+                label={translation.addBlock}
+                onClick={addNewContentBlock}
+            />
         </div>
     );
 };

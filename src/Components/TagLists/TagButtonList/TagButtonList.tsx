@@ -3,6 +3,8 @@ import styles from "../index.module.scss";
 import React, { FC, ReactElement } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
+import translation from "../../../language/ru.json";
+
 import { RootStateProps } from "../../../redux/redusers/rootReduser";
 import { getTagArr } from "../../../redux/redusers/tagsState";
 import { selectChoosedTagList } from "../../../redux/redusers/ProjectsReduser";
@@ -44,7 +46,7 @@ export const TagButtonList: FC<TagListProps> = ({
                     <span
                         className={`${styles.container__tagList__message} subtitle3`}
                     >
-                        {"Добавте тэги в общих настройках."}
+                        {translation.addTagsInGeneralSettings}
                     </span>
                 ) : (
                     filtredKeyList?.map((id: string, index) => {

@@ -5,14 +5,16 @@ import { useLocation, useHistory } from "react-router-dom";
 
 import { MetCircleBtn } from "@metamodern.dev/metamodern-ui/";
 
+import translation from "../../language/ru.json";
+
 import { ContainerProps } from "./index";
 
 import { routConstants } from "../../Navigation";
 
 const headerList = {
-    [routConstants.HOME]: "Портфолио",
-    [routConstants.GENERAL_SETTINGS]: "Общие настройки",
-    [routConstants.USERS_SETTINGS]: "Настройки команды",
+    [routConstants.HOME]: translation.portfolio,
+    [routConstants.GENERAL_SETTINGS]: translation.generelSettings,
+    [routConstants.USERS_SETTINGS]: translation.userSettings,
 };
 
 export const Container: FC<ContainerProps> = ({ children }): ReactElement => {
@@ -40,7 +42,6 @@ export const Container: FC<ContainerProps> = ({ children }): ReactElement => {
     return (
         <div className={styles.ground}>
             <div className={styles.ground__centred}>
-                
                 {isHomePage ? null : (
                     <div className={styles.btnContainer}>
                         <MetCircleBtn onClick={setPath} />
