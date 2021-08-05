@@ -1,0 +1,14 @@
+@import "../../../styles/foundation.scss";
+
+.container {
+    padding: 3px 5px;
+
+    border: $defaultBorder solid $neutral600;
+    border-radius: $borderRadius;
+
+    cursor: pointer;
+
+    & > span {
+        color: $neutral600;
+    }
+}

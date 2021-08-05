@@ -11,18 +11,25 @@ import { TagbleType } from "../../Components/TagLists/TagbleType";
 
 import { deleteHandler } from "../helperRedux";
 
-interface Tag {
+export interface TagProps {
     tagType: TagbleType.BRIEF | TagbleType.MAIL | TagbleType.PROJECT;
     value: string;
     isChecked?: boolean;
 }
 
 export interface TagsStateProps {
-    [id: string]: Tag;
+    [id: string]: TagProps;
 }
 
+const initialState = {
+    "00": { tagType: TagbleType.PROJECT, value: "Develop", isChecked: true },
+    "01": { tagType: TagbleType.PROJECT, value: "NARUTO", isChecked: true },
+    "02": { tagType: TagbleType.PROJECT, value: "SASUKE", isChecked: true },
+    "03": { tagType: TagbleType.PROJECT, value: "SAKURA", isChecked: true },
+};
+
 // reducer
-export function tagsState(state: TagsStateProps = {}, action) {
+export function tagsState(state: TagsStateProps = initialState, action) {
     switch (action.type) {
         case ADD_TAG: {
             const value = action.payload.value;
@@ -62,7 +69,9 @@ export function tagsState(state: TagsStateProps = {}, action) {
 }
 
 // selectors
-export const getTagArr = (state, tagListType) => {
+export const selectTagList = (state) => state.tagsState;
+
+export const selectKeyArr = (state, tagListType) => {
     const tagList = state.tagsState;
 
     return Object.keys(tagList).filter(

@@ -48,7 +48,29 @@ interface ProjectsStateProps {
     [id: string]: ProjectProps;
 }
 
-const initialState = {};
+const initialState = {
+    "001": {
+        fullName: "MonkeyFood",
+        shortName: "MonkeyFood",
+        isVisibleOnSite: true,
+        isMainPageOnSite: true,
+        tagList: ["00", "01", "02", "03"],
+    },
+    "002": {
+        fullName: "SimpleDimple",
+        shortName: "SimpleDimple",
+        isVisibleOnSite: true,
+        isMainPageOnSite: false,
+        tagList: ["02", "03"],
+    },
+    "003": {
+        fullName: "POPIbT",
+        shortName: "POPIbT",
+        isVisibleOnSite: false,
+        isMainPageOnSite: true,
+        tagList: ["02", "01"],
+    },
+};
 
 // reducer
 export function projectsState(
@@ -249,6 +271,14 @@ export function projectsState(
 }
 
 // selectors
+export const selectCaseList = (state) => state.projectsState;
+
+export const selectCaseKeyArr = (state) => {
+    const caseList = state.projectsState;
+
+    return Object.keys(caseList);
+};
+
 export const selectCreationDate = (state, id: string) =>
     state.projectsState[id]?.creationDate;
 

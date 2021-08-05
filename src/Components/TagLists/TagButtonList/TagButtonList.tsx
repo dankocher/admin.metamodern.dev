@@ -5,8 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 
 import translation from "../../../language/ru.json";
 
-import { RootStateProps } from "../../../redux/redusers/rootReduser";
-import { getTagArr } from "../../../redux/redusers/tagsState";
+import { selectKeyArr, selectTagList } from "../../../redux/redusers/tagsState";
 import { selectChoosedTagList } from "../../../redux/redusers/ProjectsReduser";
 
 import { TagListProps } from "../TagListProps";
@@ -17,10 +16,10 @@ export const TagButtonList: FC<TagListProps> = ({
     tagListType,
     header,
 }): ReactElement => {
-    const tagList = useSelector((state: RootStateProps) => state.tagsState);
+    const tagList = useSelector(selectTagList || {});
 
-    const filtredKeyList = useSelector((state) =>
-        getTagArr(state, tagListType)
+    const filtredKeyList = useSelector(
+        (state) => selectKeyArr(state, tagListType) || []
     );
 
     const choosedTagList = useSelector(

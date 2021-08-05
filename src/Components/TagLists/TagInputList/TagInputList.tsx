@@ -15,7 +15,7 @@ import { TagListProps } from "../TagListProps";
 import { RootStateProps } from "../../../redux/redusers/rootReduser";
 import { TagbleType } from "../TagbleType";
 
-import { getTagArr } from "../../../redux/redusers/tagsState";
+import { selectKeyArr, selectTagList } from "../../../redux/redusers/tagsState";
 import { addTag } from "../../../redux/actions/tagsActions";
 
 import { TagInput } from "../TagInput";
@@ -30,10 +30,10 @@ export const TagInputList: FC<TagListProps> = ({
 
     const [isNewTagVisible, setIsNewTagVisible] = useState(false);
 
-    const tagList = useSelector((state: RootStateProps) => state.tagsState);
+    const tagList = useSelector(selectTagList || {});
 
-    const filtredKeyList = useSelector((state) =>
-        getTagArr(state, tagListType)
+    const filtredKeyList = useSelector(
+        (state) => selectKeyArr(state, tagListType) || []
     );
 
     useLayoutEffect(() => {

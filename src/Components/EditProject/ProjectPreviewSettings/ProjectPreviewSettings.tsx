@@ -66,7 +66,7 @@ export const ProjectPreviewSettings: FC<{ id: string }> = ({
         }
     };
 
-    const onChangeToggleHandler = (_, action, id) => {
+    const onChangeToggleHandler = (action) => {
         dispatch(action(id));
     };
 
@@ -93,22 +93,14 @@ export const ProjectPreviewSettings: FC<{ id: string }> = ({
                             <MetToggle
                                 isChecked={isVisibleOnSite}
                                 onChange={(_) =>
-                                    onChangeToggleHandler(
-                                        _,
-                                        toggleIsVisibleOnSite,
-                                        id
-                                    )
+                                    onChangeToggleHandler(toggleIsVisibleOnSite)
                                 }
                             />
                         </div>
                         <MetSquareIconCheckbox
                             isChecked={isMainPageOnSite}
                             onChange={(_) =>
-                                onChangeToggleHandler(
-                                    _,
-                                    toggleIsMainPageOnSite,
-                                    id
-                                )
+                                onChangeToggleHandler(toggleIsMainPageOnSite)
                             }
                         />
                         <MetSquareIconBtn

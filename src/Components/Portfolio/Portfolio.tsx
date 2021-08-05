@@ -13,6 +13,7 @@ import { uncheckedStarIcon } from "../../assets/icons/unchecked-star-icon";
 import { getEditProgectUrl } from "../../Navigation";
 import { addProject } from "../../redux/actions/ProjectsActions";
 import { TableTitle } from "./TableTitle";
+import { CaseList } from "./CaseList";
 
 export const Portfolio = () => {
     const dispatch = useDispatch();
@@ -37,6 +38,8 @@ export const Portfolio = () => {
                 <TableTitle title={translation.tags} />
                 <TableTitle title={translation.onOf} />
             </div>
+
+            <CaseList />
         </div>
     );
 };
