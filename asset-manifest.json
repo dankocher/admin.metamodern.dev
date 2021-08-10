@@ -1,21 +1,22 @@
 {
   "files": {
-    "main.css": "/metamodern.dev/static/css/main.6c641ddf.chunk.css",
-    "main.js": "/metamodern.dev/static/js/main.498883b1.chunk.js",
-    "main.js.map": "/metamodern.dev/static/js/main.498883b1.chunk.js.map",
+    "main.css": "/metamodern.dev/static/css/main.579250b6.chunk.css",
+    "main.js": "/metamodern.dev/static/js/main.7201f6f2.chunk.js",
+    "main.js.map": "/metamodern.dev/static/js/main.7201f6f2.chunk.js.map",
     "runtime-main.js": "/metamodern.dev/static/js/runtime-main.c8e68be0.js",
     "runtime-main.js.map": "/metamodern.dev/static/js/runtime-main.c8e68be0.js.map",
     "static/js/2.7251cce4.chunk.js": "/metamodern.dev/static/js/2.7251cce4.chunk.js",
     "static/js/2.7251cce4.chunk.js.map": "/metamodern.dev/static/js/2.7251cce4.chunk.js.map",
     "index.html": "/metamodern.dev/index.html",
-    "static/css/main.6c641ddf.chunk.css.map": "/metamodern.dev/static/css/main.6c641ddf.chunk.css.map",
+    "static/css/main.579250b6.chunk.css.map": "/metamodern.dev/static/css/main.579250b6.chunk.css.map",
     "static/js/2.7251cce4.chunk.js.LICENSE.txt": "/metamodern.dev/static/js/2.7251cce4.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "/metamodern.dev/static/media/Roboto-Regular.a8d6ac03.ttf",
     "static/media/test.b44456d9.png": "/metamodern.dev/static/media/test.b44456d9.png"
   },
   "entrypoints": [
     "static/js/runtime-main.c8e68be0.js",
     "static/js/2.7251cce4.chunk.js",
-    "static/css/main.6c641ddf.chunk.css",
-    "static/js/main.498883b1.chunk.js"
+    "static/css/main.579250b6.chunk.css",
+    "static/js/main.7201f6f2.chunk.js"
   ]
 }
