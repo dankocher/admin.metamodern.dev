@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/metamodern.dev/static/css/main.9ddc4414.chunk.css",
+    "main.css": "/metamodern.dev/static/css/main.c1f1ab5b.chunk.css",
     "main.js": "/metamodern.dev/static/js/main.51f33def.chunk.js",
     "main.js.map": "/metamodern.dev/static/js/main.51f33def.chunk.js.map",
     "runtime-main.js": "/metamodern.dev/static/js/runtime-main.c8e68be0.js",
@@ -8,14 +8,14 @@
     "static/js/2.7251cce4.chunk.js": "/metamodern.dev/static/js/2.7251cce4.chunk.js",
     "static/js/2.7251cce4.chunk.js.map": "/metamodern.dev/static/js/2.7251cce4.chunk.js.map",
     "index.html": "/metamodern.dev/index.html",
-    "static/css/main.9ddc4414.chunk.css.map": "/metamodern.dev/static/css/main.9ddc4414.chunk.css.map",
+    "static/css/main.c1f1ab5b.chunk.css.map": "/metamodern.dev/static/css/main.c1f1ab5b.chunk.css.map",
     "static/js/2.7251cce4.chunk.js.LICENSE.txt": "/metamodern.dev/static/js/2.7251cce4.chunk.js.LICENSE.txt",
     "static/media/test.b44456d9.png": "/metamodern.dev/static/media/test.b44456d9.png"
   },
   "entrypoints": [
     "static/js/runtime-main.c8e68be0.js",
     "static/js/2.7251cce4.chunk.js",
-    "static/css/main.9ddc4414.chunk.css",
+    "static/css/main.c1f1ab5b.chunk.css",
     "static/js/main.51f33def.chunk.js"
   ]
 }
