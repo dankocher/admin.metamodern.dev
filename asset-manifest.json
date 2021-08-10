@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/metamodern.dev/static/css/main.6c641ddf.chunk.css",
+    "main.css": "/metamodern.dev/static/css/main.e1b58109.chunk.css",
     "main.js": "/metamodern.dev/static/js/main.dfcf0e89.chunk.js",
     "main.js.map": "/metamodern.dev/static/js/main.dfcf0e89.chunk.js.map",
     "runtime-main.js": "/metamodern.dev/static/js/runtime-main.c8e68be0.js",
@@ -10,7 +10,7 @@
     "static/js/2.12dabf7d.chunk.js.map": "/metamodern.dev/static/js/2.12dabf7d.chunk.js.map",
     "index.html": "/metamodern.dev/index.html",
     "static/css/2.df62a7d8.chunk.css.map": "/metamodern.dev/static/css/2.df62a7d8.chunk.css.map",
-    "static/css/main.6c641ddf.chunk.css.map": "/metamodern.dev/static/css/main.6c641ddf.chunk.css.map",
+    "static/css/main.e1b58109.chunk.css.map": "/metamodern.dev/static/css/main.e1b58109.chunk.css.map",
     "static/js/2.12dabf7d.chunk.js.LICENSE.txt": "/metamodern.dev/static/js/2.12dabf7d.chunk.js.LICENSE.txt",
     "static/media/index.css": "/metamodern.dev/static/media/roboto-vietnamese-400-normal.c0bec65d.woff2",
     "static/media/500.css": "/metamodern.dev/static/media/roboto-vietnamese-500-normal.b8e494da.woff2",
@@ -20,7 +20,7 @@
     "static/js/runtime-main.c8e68be0.js",
     "static/css/2.df62a7d8.chunk.css",
     "static/js/2.12dabf7d.chunk.js",
-    "static/css/main.6c641ddf.chunk.css",
+    "static/css/main.e1b58109.chunk.css",
     "static/js/main.dfcf0e89.chunk.js"
   ]
 }
