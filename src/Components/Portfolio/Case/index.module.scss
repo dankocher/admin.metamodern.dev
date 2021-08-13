@@ -1,93 +1,95 @@
 @import "../../../styles/foundation.scss";
 
 .container {
+  width: 100%;
+
+  display: grid;
+  grid-template: 123px / 7.06401766% 71.96467991% 9.271523179% 11.69977925%;
+
+  border-top: $defaultBorder solid $neutral300;
+
+  &:hover {
+    background-color: $neutral200;
+
+    .container__checkboxWrapper {
+      visibility: visible;
+    }
+
+    .container__optionWrapper {
+      visibility: visible;
+    }
+  }
+
+  &__clickable {
+    cursor: pointer;
+
     display: grid;
-    grid-template: 123px / 64px 1fr 84px 106px;
+    grid-template: 100% / 16.56441718% 32.05521472% 51.3803681%;
 
-    border-top: $defaultBorder solid $neutral300;
+    &__imgWrapper {
+      height: 100%;
+      width: 100%;
 
-    &:hover {
-        background-color: $neutral200;
+      display: flex;
 
-        .container__checkboxWrapper {
-            visibility: visible;
-        }
-
-        .container__optionWrapper {
-            visibility: visible;
-        }
+      img {
+        margin: 8px auto;
+      }
     }
 
-    &__clickable {
-        cursor: pointer;
+    &__nameWrapper {
+      display: flex;
+      align-items: center;
+      padding-left: 56px;
 
-        display: grid;
-        grid-template: 100% / 108px 209px 1fr;
-
-        &__imgWrapper {
-            height: 100%;
-            width: 100%;
-
-            display: flex;
-
-            img {
-                margin: 8px auto;
-            }
-        }
-
-        &__nameWrapper {
-            display: flex;
-            align-items: center;
-            padding-left: 56px;
-
-            & > span {
-                color: $neutral800;
-            }
-        }
-
-        &__tagListWrapper {
-            display: flex;
-            align-items: center;
-            padding-left: 16px;
-        }
+      & > span {
+        color: $neutral800;
+      }
     }
 
-    &__checkboxWrapper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    &__tagListWrapper {
+      display: flex;
+      align-items: center;
+      padding-left: 16px;
+    }
+  }
 
-        &__visible {
-            visibility: visible;
-        }
+  &__checkboxWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-        &__hidden {
-            visibility: hidden;
-        }
+    &__visible {
+      visibility: visible;
     }
 
-    &__toggleWrapper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        & > div {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            height: 24px;
-            width: 36px;
-        }
+    &__hidden {
+      visibility: hidden;
     }
+  }
 
-    &__optionWrapper {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+  &__toggleWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-        padding: 0 17px;
+    & > div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-        visibility: hidden;
+      height: 24px;
+      width: 36px;
     }
+  }
+
+  &__optionWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 17px;
+
+    visibility: hidden;
+  }
 }

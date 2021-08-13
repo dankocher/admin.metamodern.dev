@@ -4,6 +4,8 @@
   "private": true,
   "homepage": "https://dankocher.github.io/metamodern.dev/",
   "dependencies": {
+    "@fontsource/noto-sans": "^4.5.0",
+    "@fontsource/roboto": "^4.5.0",
     "@metamodern.dev/metamodern-ui": "^1.2.20",
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.7",

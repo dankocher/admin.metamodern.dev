@@ -6,6 +6,11 @@ import App from "./App";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
 
+import "@fontsource/roboto"
+import "@fontsource/roboto/500.css"
+import "@fontsource/noto-sans"
+
+
 import factory from "./redux/configureStore";
 
 const { store, persistor } = factory();

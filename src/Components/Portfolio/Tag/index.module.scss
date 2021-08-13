@@ -1,14 +1,28 @@
 @import "../../../styles/foundation.scss";
 
 .container {
-    padding: 3px 5px;
+  height: 28px;
+  max-width: 100%;
 
-    border: $defaultBorder solid $neutral600;
-    border-radius: $borderRadius;
+  display: flex;
+  align-items: center;
 
-    cursor: pointer;
+  line-height: unset;
 
-    & > span {
-        color: $neutral600;
-    }
+  padding: 3px 5px;
+
+  border: $defaultBorder solid $neutral600;
+  border-radius: $borderRadius;
+
+  cursor: pointer;
+
+  & > span {
+    max-width: 100%;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    color: $neutral600;
+  }
 }
