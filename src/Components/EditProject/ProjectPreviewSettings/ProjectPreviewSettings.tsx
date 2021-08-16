@@ -24,7 +24,7 @@ import {
 import {
     selectIsVisibleOnSite,
     selectIsMainPageOnSite,
-} from "../../../redux/redusers/ProjectsReduser";
+} from "../../../redux/reducers/ProjectsReducer";
 
 import { linkIcon } from "../../../assets/icons/link-icon";
 import { TagbleType } from "../../TagLists/TagbleType";

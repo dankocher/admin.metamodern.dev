@@ -17,7 +17,7 @@ import {
     getWhatsApp,
     getEmail,
     getTelegram,
-} from "../../../redux/redusers/contactsReduser";
+} from "../../../redux/reducers/contactsReducer";
 
 export const Contacts = () => {
     const labelFont = "subtitle2";

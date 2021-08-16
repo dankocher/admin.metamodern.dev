@@ -5,8 +5,8 @@ import { useSelector, useDispatch } from "react-redux";
 
 import translation from "../../../language/ru.json";
 
-import { selectKeyArr, selectTagList } from "../../../redux/redusers/tagsState";
-import { selectChoosedTagList } from "../../../redux/redusers/ProjectsReduser";
+import { selectKeyArr, selectTagList } from "../../../redux/reducers/tagsState";
+import { selectChoosedTagList } from "../../../redux/reducers/ProjectsReducer";
 
 import { TagListProps } from "../TagListProps";
 import { TagButton } from "../TagButton";

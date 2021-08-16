@@ -3,9 +3,9 @@ import { combineReducers } from "redux";
 // import storage from "redux-persist/lib/storage";
 
 import { TagsStateProps, tagsState } from "./tagsState";
-import { contactsState } from "./contactsReduser";
-import { projectsState } from "./ProjectsReduser";
-import { teamState } from "./teamReduser";
+import { contactsState } from "./contactsReducer";
+import { projectsState } from "./ProjectsReducer";
+import { teamState } from "./teamReducer";
 
 // export const persistConfig = {
 //   key: "root",

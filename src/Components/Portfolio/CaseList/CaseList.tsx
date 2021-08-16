@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 import {
     selectCaseKeyArr,
     selectCaseList,
-} from "../../../redux/redusers/ProjectsReduser";
+} from "../../../redux/reducers/ProjectsReducer";
 
 import { CaseListProps } from "./CaseListProps";
 import { Case } from "../Case";

@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { MetTagButton } from "@metamodern.dev/metamodern-ui/";
 
-import { selectChoosedTagList } from "../../../redux/redusers/ProjectsReduser";
+import { selectChoosedTagList } from "../../../redux/reducers/ProjectsReducer";
 
 import {
     chooseTagBtn,

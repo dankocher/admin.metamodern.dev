@@ -3,7 +3,7 @@ import styles from "./index.module.scss";
 import React, { FC, ReactElement } from "react";
 import { useSelector } from "react-redux";
 
-import { selectTagList } from "../../../redux/redusers/tagsState";
+import { selectTagList } from "../../../redux/reducers/tagsState";
 
 import { TagListProps } from "./TagListProps";
 import { Tag } from "../Tag";

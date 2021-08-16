@@ -12,10 +12,9 @@ import { useSelector, useDispatch } from "react-redux";
 
 import { TagListProps } from "../TagListProps";
 
-import { RootStateProps } from "../../../redux/redusers/rootReduser";
 import { TagbleType } from "../TagbleType";
 
-import { selectKeyArr, selectTagList } from "../../../redux/redusers/tagsState";
+import { selectKeyArr, selectTagList } from "../../../redux/reducers/tagsState";
 import { addTag } from "../../../redux/actions/tagsActions";
 
 import { TagInput } from "../TagInput";

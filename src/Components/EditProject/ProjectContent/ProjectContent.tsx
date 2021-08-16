@@ -15,7 +15,7 @@ import translation from "../../../language/ru.json";
 import { ContentBlock } from "./ContentBlock";
 import { AddSectionBtn } from "../AddSectionBtn";
 
-import { selectContentList } from "../../../redux/redusers/ProjectsReduser";
+import { selectContentList } from "../../../redux/reducers/ProjectsReducer";
 import {
     addContentBlock,
     deleteContentBlock,
