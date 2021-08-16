@@ -82,7 +82,7 @@ export const Contacts = () => {
                     labelFontClass={labelFont}
                     inputFontClass={inputFont}
                     isTextField={true}
-                    label={translation.mail}
+                    label={translation.email}
                     value={localEmail}
                     onChange={onChangeEmail}
                     onBlur={onBlurEmail}

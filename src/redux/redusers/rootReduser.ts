@@ -5,6 +5,7 @@ import { combineReducers } from "redux";
 import { TagsStateProps, tagsState } from "./tagsState";
 import { contactsState } from "./contactsReduser";
 import { projectsState } from "./ProjectsReduser";
+import { teamState } from "./teamReduser";
 
 // export const persistConfig = {
 //   key: "root",
@@ -19,13 +20,14 @@ import { projectsState } from "./ProjectsReduser";
 // };
 
 export interface RootStateProps {
-    tagsState: TagsStateProps;
+  tagsState: TagsStateProps;
 }
 
 const rootReducer = combineReducers({
-    tagsState,
-    contactsState,
-    projectsState,
+  tagsState,
+  contactsState,
+  projectsState,
+  teamState,
 });
 
 export default rootReducer;

@@ -24,7 +24,7 @@ export const SideMenu: FC<SideMenuProps> = (): ReactElement => {
         history.push(routConstants.HOME);
     };
     const goUsersSettingsHandler = () => {
-        history.push(routConstants.USERS_SETTINGS);
+        history.push(routConstants.TEAM_SETTINGS);
     };
     const goGeneralSettingsHandler = () => {
         history.push(routConstants.GENERAL_SETTINGS);
@@ -72,7 +72,7 @@ export const SideMenu: FC<SideMenuProps> = (): ReactElement => {
                 icon={teamIcon}
                 label="Команда"
                 onClick={goUsersSettingsHandler}
-                isSelected={getIsSelected(routConstants.USERS_SETTINGS)}
+                isSelected={getIsSelected(routConstants.TEAM_SETTINGS)}
             />
         </div>
     );

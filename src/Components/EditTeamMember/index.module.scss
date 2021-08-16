@@ -1,0 +1,40 @@
+.container {
+  width: 100%;
+
+  padding: 43px 53px 63px;
+
+  overflow: auto;
+
+  display: flex;
+  flex-direction: column;
+
+  &__nameWrapper {
+    width: 100%;
+
+    display: flex;
+
+    margin-bottom: 20px;
+
+    &__optionsWrapper {
+      min-width: 76px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      margin-left: 20px;
+
+      .toggleWrapper {
+        display: flex;
+        align-items: center;
+
+        width: 36px;
+      }
+    }
+  }
+
+  .selectWrapper{
+      margin-top: 20px;
+      z-index: 10;
+  }
+}

@@ -14,7 +14,7 @@ import { routConstants } from "../../Navigation";
 const headerList = {
     [routConstants.HOME]: translation.portfolio,
     [routConstants.GENERAL_SETTINGS]: translation.generelSettings,
-    [routConstants.USERS_SETTINGS]: translation.userSettings,
+    [routConstants.TEAM_SETTINGS]: translation.userSettings,
 };
 
 export const Container: FC<ContainerProps> = ({ children }): ReactElement => {
@@ -31,7 +31,7 @@ export const Container: FC<ContainerProps> = ({ children }): ReactElement => {
         setIsHaveHeader(
             location.pathname === routConstants.HOME ||
                 location.pathname === routConstants.GENERAL_SETTINGS ||
-                location.pathname === routConstants.USERS_SETTINGS
+                location.pathname === routConstants.TEAM_SETTINGS
         );
     }, [location.pathname, setIsHomePage, setIsHaveHeader]);
 
