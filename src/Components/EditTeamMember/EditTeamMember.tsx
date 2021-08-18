@@ -1,7 +1,7 @@
 import styles from "./index.module.scss";
 
-import React, { FC, ReactElement, useState } from "react";
-import { useDispatch } from "react-redux";
+import React, { FC, ReactElement, useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 
 import {
@@ -14,7 +14,19 @@ import {
 
 import translation from "../../language/ru.json";
 
-import { editName } from "../../redux/actions/teamActions";
+import {
+  editName,
+  editAbout,
+  onToggleIsVisibleOnSite,
+  editPosition,
+} from "../../redux/actions/teamActions";
+
+import {
+  getName,
+  getAbout,
+  getIsVisibleOnSite,
+  getPosition,
+} from "../../redux/reducers/teamReducer";
 
 const items = [
   { id: "01", value: "Itachi" },
@@ -26,15 +38,30 @@ export const EditTeamMember: FC<any> = (): ReactElement => {
   const { id } = useParams();
   const dispatch = useDispatch();
 
-  const [localName, setLocalName] = useState("");
+  const [localName, setLocalName] = useState<string>("");
+  const [localAbout, setLocalAbout] = useState<string>("");
+
+  const name = useSelector((state) => getName(state, id));
+  const about = useSelector((state) => getAbout(state, id));
+  const isVisibleOnSite = useSelector((state) => getIsVisibleOnSite(state, id));
+  const position = useSelector((state) => getPosition(state, id));
+
+  useEffect(() => {
+    setLocalName(name);
+    setLocalAbout(about);
+  }, []);
 
   const onChangeTextHandler = (event, setter) => {
     const value = event.target.value;
     setter(value);
   };
 
-  const onBlureTextHandler = (action, value) => {
+  const onBlureHandler = (action, value) => {
     dispatch(action(id, value));
+  };
+
+  const onToggleHandler = (action) => {
+    dispatch(action(id));
   };
 
   return (
@@ -45,16 +72,14 @@ export const EditTeamMember: FC<any> = (): ReactElement => {
           placeholder={translation.name}
           value={localName}
           onChange={(event) => onChangeTextHandler(event, setLocalName)}
-          onBlur={(_) => onBlureTextHandler(editName, localName)}
+          onBlur={(_) => onBlureHandler(editName, localName)}
         />
 
         <div className={styles.container__nameWrapper__optionsWrapper}>
           <div className={styles.toggleWrapper}>
             <MetToggle
-            // isChecked={isVisibleOnSite}
-            // onChange={(_) =>
-            //     onChangeToggleHandler(toggleIsVisibleOnSite)
-            // }
+              isChecked={isVisibleOnSite}
+              onChange={(_) => onToggleHandler(onToggleIsVisibleOnSite)}
             />
           </div>
           <MetSquareIconBtn />
@@ -63,11 +88,20 @@ export const EditTeamMember: FC<any> = (): ReactElement => {
       <MetTextArea
         inputFontClass={inputFont}
         placeholder={translation.aboutYou}
+        value={localAbout}
+        onChange={(event) => onChangeTextHandler(event, setLocalAbout)}
+        onBlur={(_) => onBlureHandler(editAbout, localAbout)}
         rowsMins={3}
         rowsMax={11}
       />
       <div className={styles.selectWrapper}>
-        <MetSelect items={items} isHaveLabel={false} />
+        <MetSelect
+          placeholder={translation.choosePosition}
+          items={items}
+          isHaveLabel={false}
+          defaultSelection={position}
+          onChange={(selection) => onBlureHandler(editPosition, selection)}
+        />
       </div>
     </div>
   );

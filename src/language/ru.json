@@ -26,5 +26,6 @@
   "addTagsInGeneralSettings": "Добавьте теги в общих настройках",
   "name": "Имя",
   "mail": "Почта",
-  "aboutYou": "Пару слов о себе"
+  "aboutYou": "Пару слов о себе",
+  "choosePosition": "Выберите должность"
 }
