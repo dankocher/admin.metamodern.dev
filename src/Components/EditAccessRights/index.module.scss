@@ -1,0 +1,42 @@
+.container {
+  width: 100%;
+
+  padding: 43px 53px 63px;
+
+  display: flex;
+  flex-direction: column;
+
+  &__name {
+    width: 100%;
+
+    display: flex;
+
+    margin-bottom: 20px;
+
+    &__options {
+      min-width: 76px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      margin-left: 20px;
+
+      .toggleWrapper {
+        display: flex;
+        align-items: center;
+
+        width: 36px;
+      }
+    }
+  }
+
+  &__info {
+    display: grid;
+    grid-template-columns: 384px 384px;
+
+    justify-content: space-between;
+
+    margin-top: 20px;
+  }
+}

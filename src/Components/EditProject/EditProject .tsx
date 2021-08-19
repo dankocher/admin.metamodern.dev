@@ -13,7 +13,7 @@ import { Modal } from "../Modal";
 import {
     selectCreationDate,
     selectFullName,
-} from "../../redux/reducers/ProjectsReducer";
+} from "../../redux/reducers/projectsReducer";
 
 const moment = require("moment");
 

@@ -27,5 +27,6 @@
   "name": "Имя",
   "mail": "Почта",
   "aboutYou": "Пару слов о себе",
-  "choosePosition": "Выберите должность"
+  "choosePosition": "Выберите должность",
+  "chooseRole": "Выберите роль"
 }

@@ -8,7 +8,6 @@ import {
   MetTextField,
   MetToggle,
   MetSquareIconBtn,
-  MetTextArea,
   MetSelect,
 } from "@metamodern.dev/metamodern-ui/";
 
@@ -16,39 +15,39 @@ import translation from "../../language/ru.json";
 
 import {
   editName,
-  editAbout,
-  onToggleIsVisibleOnSite,
-  editPosition,
-} from "../../redux/actions/teamActions";
+  editMail,
+  onToggleIsUserDisable,
+  editRole,
+} from "../../redux/actions/usersActions";
 
 import {
   getName,
-  getAbout,
-  getIsVisibleOnSite,
-  getPosition,
-} from "../../redux/reducers/teamReducer";
+  getMail,
+  getIsDisable,
+  getRole,
+} from "../../redux/reducers/usersReducer";
 
 const items = [
   { id: "01", value: "Itachi" },
   { id: "02", value: "RiBa" },
 ];
 
-export const EditTeamMember = (): ReactElement => {
+export const EditAccessRights = (): ReactElement => {
   const inputFont = "body2";
   const { id } = useParams();
   const dispatch = useDispatch();
 
   const [localName, setLocalName] = useState<string>("");
-  const [localAbout, setLocalAbout] = useState<string>("");
+  const [localMail, setLocalMail] = useState<string>("");
 
   const name = useSelector((state) => getName(state, id));
-  const about = useSelector((state) => getAbout(state, id));
-  const isVisibleOnSite = useSelector((state) => getIsVisibleOnSite(state, id));
-  const position = useSelector((state) => getPosition(state, id));
+  const mail = useSelector((state) => getMail(state, id));
+  const isDisable = useSelector((state) => getIsDisable(state, id));
+  const role = useSelector((state) => getRole(state, id));
 
   useEffect(() => {
     setLocalName(name);
-    setLocalAbout(about);
+    setLocalMail(mail);
   }, []);
 
   const onChangeTextHandler = (event, setter) => {
@@ -66,7 +65,7 @@ export const EditTeamMember = (): ReactElement => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.container__nameWrapper}>
+      <div className={styles.container__name}>
         <MetTextField
           inputFontClass={inputFont}
           placeholder={translation.name}
@@ -75,32 +74,31 @@ export const EditTeamMember = (): ReactElement => {
           onBlur={(_) => onBlureHandler(editName, localName)}
         />
 
-        <div className={styles.container__nameWrapper__optionsWrapper}>
+        <div className={styles.container__name__options}>
           <div className={styles.toggleWrapper}>
             <MetToggle
-              isChecked={isVisibleOnSite}
-              onChange={(_) => onToggleHandler(onToggleIsVisibleOnSite)}
+              isChecked={isDisable}
+              onChange={(_) => onToggleHandler(onToggleIsUserDisable)}
             />
           </div>
           <MetSquareIconBtn />
         </div>
       </div>
-      <MetTextArea
-        inputFontClass={inputFont}
-        placeholder={translation.aboutYou}
-        value={localAbout}
-        onChange={(event) => onChangeTextHandler(event, setLocalAbout)}
-        onBlur={(_) => onBlureHandler(editAbout, localAbout)}
-        rowsMins={3}
-        rowsMax={11}
-      />
-      <div className={styles.selectWrapper}>
+      <div className={styles.container__info}>
+        <MetTextField
+          inputFontClass={inputFont}
+          placeholder={translation.mail}
+          value={localMail}
+          onChange={(event) => onChangeTextHandler(event, setLocalMail)}
+          onBlur={(_) => onBlureHandler(editMail, localMail)}
+        />
+
         <MetSelect
-          placeholder={translation.choosePosition}
+          placeholder={translation.chooseRole}
           items={items}
           isHaveLabel={false}
-          defaultSelection={position}
-          onChange={(selection) => onBlureHandler(editPosition, selection)}
+          defaultSelection={role}
+          onChange={(selection) => onBlureHandler(editRole, selection)}
         />
       </div>
     </div>
