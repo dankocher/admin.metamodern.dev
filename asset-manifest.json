@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/metamodern.dev/static/css/main.7b9d23fc.chunk.css",
-    "main.js": "/metamodern.dev/static/js/main.dfcf0e89.chunk.js",
-    "main.js.map": "/metamodern.dev/static/js/main.dfcf0e89.chunk.js.map",
+    "main.css": "/metamodern.dev/static/css/main.d073a89e.chunk.css",
+    "main.js": "/metamodern.dev/static/js/main.a9970133.chunk.js",
+    "main.js.map": "/metamodern.dev/static/js/main.a9970133.chunk.js.map",
     "runtime-main.js": "/metamodern.dev/static/js/runtime-main.c8e68be0.js",
     "runtime-main.js.map": "/metamodern.dev/static/js/runtime-main.c8e68be0.js.map",
-    "static/css/2.df62a7d8.chunk.css": "/metamodern.dev/static/css/2.df62a7d8.chunk.css",
-    "static/js/2.12dabf7d.chunk.js": "/metamodern.dev/static/js/2.12dabf7d.chunk.js",
-    "static/js/2.12dabf7d.chunk.js.map": "/metamodern.dev/static/js/2.12dabf7d.chunk.js.map",
+    "static/css/2.8669a9f4.chunk.css": "/metamodern.dev/static/css/2.8669a9f4.chunk.css",
+    "static/js/2.450e2389.chunk.js": "/metamodern.dev/static/js/2.450e2389.chunk.js",
+    "static/js/2.450e2389.chunk.js.map": "/metamodern.dev/static/js/2.450e2389.chunk.js.map",
     "index.html": "/metamodern.dev/index.html",
-    "static/css/2.df62a7d8.chunk.css.map": "/metamodern.dev/static/css/2.df62a7d8.chunk.css.map",
-    "static/css/main.7b9d23fc.chunk.css.map": "/metamodern.dev/static/css/main.7b9d23fc.chunk.css.map",
-    "static/js/2.12dabf7d.chunk.js.LICENSE.txt": "/metamodern.dev/static/js/2.12dabf7d.chunk.js.LICENSE.txt",
+    "static/css/2.8669a9f4.chunk.css.map": "/metamodern.dev/static/css/2.8669a9f4.chunk.css.map",
+    "static/css/main.d073a89e.chunk.css.map": "/metamodern.dev/static/css/main.d073a89e.chunk.css.map",
+    "static/js/2.450e2389.chunk.js.LICENSE.txt": "/metamodern.dev/static/js/2.450e2389.chunk.js.LICENSE.txt",
     "static/media/index.css": "/metamodern.dev/static/media/roboto-vietnamese-400-normal.c0bec65d.woff2",
     "static/media/500.css": "/metamodern.dev/static/media/roboto-vietnamese-500-normal.b8e494da.woff2",
     "static/media/test.b44456d9.png": "/metamodern.dev/static/media/test.b44456d9.png"
   },
   "entrypoints": [
     "static/js/runtime-main.c8e68be0.js",
-    "static/css/2.df62a7d8.chunk.css",
-    "static/js/2.12dabf7d.chunk.js",
-    "static/css/main.7b9d23fc.chunk.css",
-    "static/js/main.dfcf0e89.chunk.js"
+    "static/css/2.8669a9f4.chunk.css",
+    "static/js/2.450e2389.chunk.js",
+    "static/css/main.d073a89e.chunk.css",
+    "static/js/main.a9970133.chunk.js"
   ]
 }
