@@ -66,7 +66,7 @@ export const EditTeamMember = (): ReactElement => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.container__nameWrapper}>
+      <div className={styles.container__name}>
         <MetTextField
           inputFontClass={inputFont}
           placeholder={translation.name}
@@ -75,7 +75,7 @@ export const EditTeamMember = (): ReactElement => {
           onBlur={(_) => onBlureHandler(editName, localName)}
         />
 
-        <div className={styles.container__nameWrapper__optionsWrapper}>
+        <div className={styles.container__name__options}>
           <div className={styles.toggleWrapper}>
             <MetToggle
               isChecked={isVisibleOnSite}

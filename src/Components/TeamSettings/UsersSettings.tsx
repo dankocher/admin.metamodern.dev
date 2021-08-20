@@ -22,9 +22,9 @@ export const TeamSettings = () => {
   const goToEditer = (_) => {
     const id = uuidv4();
 
-    // dispatch(addTeamMember(id));
-    // history.push(getEditTeamMemberUrl(id));
-    history.push(getEditAccessRightsUrl(id));
+    dispatch(addTeamMember(id));
+    history.push(getEditTeamMemberUrl(id));
+    // history.push(getEditAccessRightsUrl(id));
   };
 
   return (
