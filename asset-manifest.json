@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/metamodern.dev/static/css/main.89d1acf7.chunk.css",
-    "main.js": "/metamodern.dev/static/js/main.486d11f2.chunk.js",
-    "main.js.map": "/metamodern.dev/static/js/main.486d11f2.chunk.js.map",
+    "main.js": "/metamodern.dev/static/js/main.4fda5a40.chunk.js",
+    "main.js.map": "/metamodern.dev/static/js/main.4fda5a40.chunk.js.map",
     "runtime-main.js": "/metamodern.dev/static/js/runtime-main.c8e68be0.js",
     "runtime-main.js.map": "/metamodern.dev/static/js/runtime-main.c8e68be0.js.map",
     "static/css/2.8669a9f4.chunk.css": "/metamodern.dev/static/css/2.8669a9f4.chunk.css",
@@ -21,6 +21,6 @@
     "static/css/2.8669a9f4.chunk.css",
     "static/js/2.450e2389.chunk.js",
     "static/css/main.89d1acf7.chunk.css",
-    "static/js/main.486d11f2.chunk.js"
+    "static/js/main.4fda5a40.chunk.js"
   ]
 }
